@@ -1,10 +1,17 @@
 # Asolaria — Authority Hierarchy · Names & Jobs
 
-**Source of truth:** the live fabric (`/api/supervisors`, office_total **726 seats**) + the loaded Special-OP-Jesse profile canon. Names and roles only — **no key material, no secrets, no PII**. Generated 2026-06-24, colony acer.
+**Source of truth:** the live fabric (`/api/supervisors`, office_total **726 seats**) + the loaded Special-OP-Jesse profile canon. Names and roles only — **no key material, no secrets, no PII**. Base hierarchy generated 2026-06-24 from the earlier Acer-side publication; the Host-8 migration artifacts below are explicitly Liris-side and separately tagged.
 
 > Note: the OP-00 logical-rotator holds an ed25519 *signing identity* (name: `ACER-SPECIAL-OP-JESSE-LOGICAL-ROTATOR`). Its **key bytes / seed are deliberately excluded** here per "private key must not leave Acer."
 
 ---
+
+## Liris-Side Branch Artifacts
+
+This branch carries the Liris-side Host-8 migration map so it does not get confused with Acer-side canon:
+
+- [HOST8-MIGRATION-MANIFEST-2026-06-24.md](HOST8-MIGRATION-MANIFEST-2026-06-24.md) — OP / daemon / file-strata / role migration manifest.
+- [HOST8-MIGRATION-MANIFEST-2026-06-24.hbp](HOST8-MIGRATION-MANIFEST-2026-06-24.hbp) — compact `json=0` tuple companion for fabric/pixels-first use.
 
 ## 1. Authority chain (top → bottom)
 
