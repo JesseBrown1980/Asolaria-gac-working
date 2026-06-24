@@ -13,6 +13,16 @@ This branch carries the Liris-side Host-8 migration map so it does not get confu
 - [HOST8-MIGRATION-MANIFEST-2026-06-24.md](HOST8-MIGRATION-MANIFEST-2026-06-24.md) — OP / daemon / file-strata / role migration manifest.
 - [HOST8-MIGRATION-MANIFEST-2026-06-24.hbp](HOST8-MIGRATION-MANIFEST-2026-06-24.hbp) — compact `json=0` tuple companion for fabric/pixels-first use.
 
+## Liris-Side Fischer / Omni Update
+
+- `MEASURED`: Rust Fischer Eval Host-8 port opened as draft PR https://github.com/JesseBrown1980/asolaria-federation-1024/pull/9 (`liris/fischer-eval-host8-2026-06-24`, commit `1522a30`).
+- `MEASURED`: Node Fischer ground-truth suite passes `26/26`; Rust `cargo check -p asolaria-server-fischer-eval --tests` passes; runtime test is blocked on this seat by missing MSVC `link.exe`.
+- `CANON/OPERATOR_OBSERVED`: Fischer is cross-level, not one hierarchy rank. It can gate OP moves, council verdicts, supervisor routes, agent actions, route choices, and omni-system transitions.
+- `OPERATOR_OBSERVED`: Hilbra and Atlas Recall are communication / pipe-tracking surfaces for the civilization, not merely search daemons. They must remain separate hierarchy surfaces in Host-8 migration maps.
+- `OPERATOR_OBSERVED`: construction yard sectors, registration office PID assignment across `113+` sectors, remote-control agents, N-prime nesting, rule-of-4, Brown-Hilbert cube expansion, tensor-collapse surfaces, and Drive/NotebookLM staging are part of the migration hierarchy map.
+
+Detailed public Liris map artifacts live in `JesseBrown1980/HYPER-BECHS--the-third-set`, branch `liris`, commit `c8bfb9a`.
+
 ## 1. Authority chain (top → bottom)
 
 | Rank | Seat | Job |
