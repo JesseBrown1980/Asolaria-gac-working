@@ -87,3 +87,19 @@
 ---
 
 *Names and jobs only. Key material, seeds, and private signing bytes are intentionally omitted (the OP-00 signing key must not leave Acer).*
+
+---
+
+## 7. Cross-level kernels & evaluators (sit at MULTIPLE levels — not one rank)
+
+Some components are **not single seats** — they have multiple abilities and operate **across** the hierarchy (at OP, council, supervisor, agent, and route levels wherever their function is needed). Flagged because a flat rank table hides them.
+
+| Component | Role | Why multi-level | Status |
+|---|---|---|---|
+| **Fischer kernel** (FISCHER-EVAL) | The evaluator / mistake-miner / reverse-gain route-scorer. Bobby-Fischer "search for absolute truth": centipawn-loss = latency/waste, **blunder = unsafe/stale move** (a claims-gate violation *is* a Fischer blunder), white-room = sandbox until 0.00 cpl. Pipeline `VERIFY→[FISCHER-EVAL]→HOOKWALL→ROUTE`; verdicts PROCEED/HOLD/ANALYZE/BLOCK/REFUTE; **never self-authorizes**. | A recurring primitive at **3 altitudes** — runtime (Node `fischer-kernel/scorer/live`), Rust kernel (hookwall verdict projection), spec (FISCHER-EVAL-V1). It scores decisions at **every** level: OP moves, council verdicts, supervisor routes, agent spawns, merges. | **LIVE `:4794`** (json=0, `.hbp` ledger) [MEASURED]. Rust-host **GAP**: the fed-1024 kernel has HOOKWALL but **no fischer-eval stage** → next port target (Rust `fischer-eval`, json=0, never-self-authorize, parity vs `fischer-kernel.mjs`). Spec = Algorithms-of-Asolaria PR #4. |
+| **white-room** | Reversible-hold sandbox — an unstable agent can't leave until it plays "perfect" (0.00 cpl / passes the gate). The Fischer punishment chamber. | Any agent/route at any level can be held. | built (`whiteroom-consumer`, `whiteroom`). |
+| **omnispindle** | Spins free-agent waves (1 main + N subs) across the fabric. | Spawns at any level. | `omnispindle-spawn-acer`; `FABRIC-OMNISPINDLE-18` capsule. |
+| **omniflywheel** | Meta-router/conductor — recirculates novelty + punishes blunders (the Fischer loop). | Cross-level meta-router. | partly operational (reverse-gain pipeline). |
+| **kernel / micro-kernels** | `asolaria-kernel-core` (no_std Rust): PID mint, envelope dispatch, crypto, hookwall, syscall, cosign-chain, GNN, tier-policy. `asolaria-kernel-boot` (bare-metal stub). The 8-byte stubbed-room host machinery the seats run on. | Bottom — *under* every seat; the substrate they execute on. | kernel-core host8-candidate; kernel-boot rust-stub. |
+
+So Fischer (and these) thread through the whole hierarchy rather than occupying one row — Fischer can sit at OP-level (gate an apex move), council-level (score a verdict), or agent-level (catch a blunder) as needed.
