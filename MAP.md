@@ -50,6 +50,21 @@ tables below to see where you are; follow the links to walk the rest.
 | `-6-cyl-generator` | satellite generator |
 | `asolaria-whiteroom-engine` · `35-TB-google-AI-Ultra-migration` | (= LEG-1 + LEG-4, listed under External legs) |
 
+## Prism/Comb 0-loss (2026-07-01) — satellite entry
+**Law (one line):** every prism/comb operation in Asolaria is a **bijection**; entropy is invariant
+under bijection (`H(f(X)) = H(X)`) — the system re-relates information with **0 loss** and never
+claims compression below Shannon's bound. Forward = **comb** (collision-avoidance, execution
+isolation, spine [5]); backward = **prism** (interference-as-search, many→1, §8 of the README).
+**Scope (claims-gate):** the **256↔1024 level transcode is MEASURED** (Q-PRISM commit `53023b6` —
+exact packing at `lcm(8,10)=40` bits, 5 bytes ⇄ 4 symbols, sha256-identical round-trip, code rate
+1.0); the **43+ layer ladder as a groupoid is CANON frame**; every additional rung stays
+**UNVERIFIED until its own round-trip proof**. Referential handle8/PID naming = **addressing
+capacity, not compression** (the repo-canon boundary — hold it).
+**In this repo (GAC):** the campaign is registered as an authority-chain event — see README §10.
+Cross-links: Q-PRISM (`53023b6`/`79e8d63`/`de00aca`) · waves-cascades [5] (the avoid/cause duality) ·
+what-is-asolaria [3] (the reductions boundary) · N-Nest (the integrity dual) · Metatagging repo
+(physics grounding).
+
 ## Current state & evolution (2026-06-28) — read this, don't flatten it
 Asolaria is a **2.5-month archaeology**, not a flat stack. **Capability lineage:** auto-approval switch →
 dashboard → multi-agent → local+web MCP + code-wiki → index language (pixels-first) → cubes-as-catalogs
