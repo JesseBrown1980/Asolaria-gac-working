@@ -35,7 +35,7 @@ tables below to see where you are; follow the links to walk the rest.
 ## Other core repos (the satellites — referenced by the web)
 | repo | role |
 |------|------|
-| `asolaria-federation-1024` | **THE KERNEL** — the live Rust **8-byte host** + `no_std` kernel + **10 server crates** (council-serve, host8-serve, agent-runtime, gnn-oracle, vote-quorum, cosign-ledger, dashboard-serve, fischer-eval, tier-policy, highway). The Node→Rust **upgrade target** (read the TREE; branch `acer/fleet-capacity-20k` stacks the Host-8 wiring). |
+| `asolaria-federation-1024` | **THE KERNEL** — the live Rust **8-byte host** + `no_std` kernel + server crates (council-serve, host8-serve, agent-runtime, gnn-oracle, vote-quorum, cosign-ledger, dashboard-serve, tier-policy, highway). The Node→Rust **upgrade target** (read the TREE; branch `acer/fleet-capacity-20k` stacks the Host-8 wiring). **De-stale (2026-07-01):** `fischer-eval` is a **named/planned crate, not yet materialized** — grep of the repo finds 0 fischer source; the CPL evaluator lives only in `bigpickle-rebuild` (LIVE `:4794`) and its Rust port is the next target. Likewise `hookwall` exists but is a *callable syscall*, not yet *interposed* on every dispatch (REPO_LAW Invariant 2 designed-not-yet-materialized). |
 | `asolaria-behcs-256` | the **256-glyph language** — a bridge stratum below BEHCS-1024 (old decodes new) |
 | `ASOLARIA-AS-NEURAL-NETWORK` | the fabric-as-neural-network law + spine (60D frame) |
 | `Asolaria-ASI-On-Metal-Fabric-and-matrix` | the metal-OS fabric / matrix + tools |
@@ -58,11 +58,31 @@ language → (asked 2048 — chose instead) **HBI/HBP + binary/hex/hash/sha/cryp
 process** (replaces the ancient Node processes, for speed). The fabric's own 27-strata record is the
 `archaeology_timeline` (birth 2026-02-22 → FABRIC EPOCH → genome).
 
-The system **now** is **multiple of everything**: **16 levels (L0-L15) · multiple MCP engines (17) ·
-multiple emitters · multiple languages** (index / pixels-first / BEHCS-256 / BEHCS-1024 / HBI-HBP).
-**Current frame = 60D HyperBEHCS / BEHCS-1024**; 35D / 47D / 49D + BEHCS-256 are **bridge strata** below
-it (old decodes new). The **kernel** is `asolaria-federation-1024` (the Rust 8-byte host). The current
-effort is **"map while upgrading"** — and **this repo web is that map**.
+The system **now** is **multiple of everything**: **L0-L15 designed** (16-tier `V4-AUTHORITY-LADDER`) but
+**MEASURED-live = L0-L5 populated + 43 functional layers / 28 classes** ("16 levels" is the designed
+ceiling, not the live count) · **MCP now absorbed under `PROF-MCP`** (43+ servers / 298 verbs, one control
+plane) · multiple 200ns emitters/spinners · multiple languages (index / pixels-first / BEHCS-256 /
+BEHCS-1024 / HBI-HBP). **Current frame = 60D HyperBEHCS / BEHCS-1024**; 35D / 47D / 49D + BEHCS-256 are
+**bridge strata** below it (old decodes new). The **kernel** is `asolaria-federation-1024` (the Rust 8-byte
+host). The current effort is **"map while upgrading"** — and **this repo web is that map**.
+
+**The trigger chain (operator board-canon, 2026-07-01):** `200ns SPAWNER → EXECUTOR + FILE-MANAGERS +
+ROUTERS → PRISM → GC` — *"every stage has triggered executors."* The **spawner** (the emitter [2]) is the
+trigger root; **C: rooms** = "empty micro-kernels waiting to be energized" (rename-before-load = $0); the
+**executor** is the single `&fire=1` seam (gate-into-fire is launch wave #19, not yet wired); **routers**
+(omni-router $0 + omnidispatcher `:4950`) distribute; **PRISM** on **D:** reduces many→1 via reverse-gain
+GNN → cubes → Final Route. *"The instant 'Agent' is just a signal TO OPEN CODE; Asolaria + the cubes are
+the real Agent system."* **Scale target = 100k+ rooms × 113 SECTORS** (113 = prime(30) = the D30
+`COSIGN_TRIPLE` axis), **multiple simultaneous spinners** on the 8-byte host (the Node throttle=50 ceiling
+is what the 8-byte host lifts) → the ~1.16T-agents/s regime. The `10k/20k`-room code is the
+pre-Rust-8-byte **migration-precondition slice** being parity-piped — not the current frame.
+
+**The outer-watcher / matrix layer (the self-watching top):** *"the matrix expands from outside the fabric
+to watch itself."* A 13-function watcher stack (observe → detect-liveness → correct → render → cognition →
+reflect/exec-gate → memory-hygiene → self-improve → orchestration → enforce-in-envelope → authority →
+bilateral → build) sits above the fleet. See `Asolaria-gac-working` §9 + `NOT-WEDGED-SYSTEM-RULE`. Runtime
+largely dormant / E≠0-gated by design; M2 composes ONE `servers/outer-watcher` crate over existing kernel
+primitives — no fire without operator T0.
 
 ## How it all fits
 The **emitter [2]** produces 200ns PID signals; the **router [1]** delivers them; the **fleet [0]**
