@@ -1,0 +1,7 @@
+GACREPAIR|id=GAC-PROOF-CHAIN-REPAIR-2026-07-06|repo=JesseBrown1980/Asolaria-gac-working|branch=codex/gac-proof-chain-repair-20260706|runtime_mutation=0|fabric_fire=0|json=0
+GACREPAIRFILE|path=README.md|sha256=14e2168a0f5cbc98f41870b51c4d0f6ff42c895a7b6d09add5823118fbcf55c1|sidecar=README.md.sha256|json=0
+GACREPAIRFILE|path=MAP.md|sha256=2fa3b157705edebd91a7be121980275f4673c95af78eac25313927042af4208f|sidecar=none|json=0
+GACREPAIRFILE|path=HOST8-MIGRATION-MANIFEST-2026-06-24.md|sha256=fac3cca2b9caf12a0dc13314b8033fafdafebb409f3f6f77d928a966052c7d5f|sidecar=HOST8-MIGRATION-MANIFEST-2026-06-24.md.sha256|json=0
+GACREPAIRFILE|path=HOST8-MIGRATION-MANIFEST-2026-06-24.hbp|sha256=acb446917d5a8259da0052260c99b6820fc39cdf9c6d5605f81bf6dea9d5cb12|sidecar=HOST8-MIGRATION-MANIFEST-2026-06-24.hbp.sha256|json=0
+GACBOUNDARY|claim=two_clock_scale|meaning=local_synthetic_pid_emission_over_elapsed_time_not_external_llm_completions_or_simultaneous_os_processes|json=0
+GACSIDECAR|format=sha256_capsule_sidecar|seal_row=first_nonblank|blank_rows=receiver_slots|json=0
