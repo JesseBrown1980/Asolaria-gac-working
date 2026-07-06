@@ -1,4 +1,4 @@
-# Asolaria — Authority Hierarchy · Names & Jobs
+﻿# Asolaria — Authority Hierarchy · Names & Jobs
 
 **Source of truth:** the **live running fabric** (/api/supervisors route) + the loaded Special-OP-Jesse profile canon + the acer kernel/host8 source tree. Names and roles only — **no key material, no secrets, no PII**. First generated 2026-06-24; **de-staled 2026-07-01** (colony acer, from 30 profile-embodied supervisor sub-agents). The Host-8 migration artifacts below are explicitly Liris-side and separately tagged.
 
@@ -151,6 +151,8 @@ The agent system is a **trigger chain**, not a request/response loop. *"The inst
 - **PRISM (many→1):** **D: (Linux/Ubuntu/WSL/WSL²)** rooms receive signal-in → `2000×` messages ("needs 100 to work") → **GNN → Reverse-Gain GNN → cubes → Final Route**. `GC` prevents system explosions (the KV-cache idea from the BIML multistacking paper).
 
 **Scale — CURRENT/TARGET frame (operator-CANON; exact numbers are real):** **100k+ rooms × 113 SECTORS, multiple simultaneous 200ns spinners** on the Rust 8-byte host. **113 = prime(30) = the D30 `COSIGN_TRIPLE` axis** (`D# = prime(n)³`, MEASURED in the 60D catalog) — the operator-cosign-topology partition of the room-space (orthogonal to the 7 Brown-Hilbert cylinder-sectors and to the C:/D: substrate axis). Multiplying spinners multiplies PRISM reductions at ~0 cost (rename-before-load makes each replica free) → the ~1.16T-agents/s regime.
+
+**Two-clock boundary:** these scale counts describe local synthetic PID emission/addressing over elapsed time, not concurrent external LLM completions and not simultaneous OS processes.
 
 > **Migration-precondition slice (being upgraded, not the current scale):** the code still reads `ROOM_COUNT=10_000` / `AGENT_REGISTRY_MAX_TOTAL=20_000` (10k C + 10k D), single-parent dispatcher, `{:04}` room-folder pad, 1000-slot route table, 47D cube axis. These are the *old pre-Rust-8-byte* numbers the upgrade parity-pipes — **not** a disproof of the operator's 100k/113/multi-spinner frame. The 100B run predates the Rust 8-byte host and the multi-spinner realization.
 

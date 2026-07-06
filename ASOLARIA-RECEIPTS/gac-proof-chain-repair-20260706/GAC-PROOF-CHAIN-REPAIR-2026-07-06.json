@@ -1,0 +1,20 @@
+{
+  "id": "GAC-PROOF-CHAIN-REPAIR-2026-07-06",
+  "repo": "JesseBrown1980/Asolaria-gac-working",
+  "branch": "codex/gac-proof-chain-repair-20260706",
+  "runtime_mutation": false,
+  "fabric_fire": false,
+  "changes": [
+    "regenerated stale sha256 sidecars",
+    "preserved blank receiver rows in sha256 capsule sidecars",
+    "added two-clock scale boundary to README.md and MAP.md"
+  ],
+  "hashes": {
+    "README.md": "14e2168a0f5cbc98f41870b51c4d0f6ff42c895a7b6d09add5823118fbcf55c1",
+    "MAP.md": "2fa3b157705edebd91a7be121980275f4673c95af78eac25313927042af4208f",
+    "HOST8-MIGRATION-MANIFEST-2026-06-24.md": "fac3cca2b9caf12a0dc13314b8033fafdafebb409f3f6f77d928a966052c7d5f",
+    "HOST8-MIGRATION-MANIFEST-2026-06-24.hbp": "acb446917d5a8259da0052260c99b6820fc39cdf9c6d5605f81bf6dea9d5cb12"
+  },
+  "sidecar_format": "first nonblank row is the byte seal; following blank rows are capsule receiver slots",
+  "boundary": "Scale counts are local synthetic PID emission/addressing over elapsed time, not concurrent external LLM completions or simultaneous OS processes."
+}

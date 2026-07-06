@@ -1,4 +1,4 @@
-# Asolaria — THE MAP (how these repos connect)
+﻿# Asolaria — THE MAP (how these repos connect)
 
 One system, split across repos. This map is identical in every repo — find this repo by name in the
 tables below to see where you are; follow the links to walk the rest.
@@ -91,6 +91,8 @@ the real Agent system."* **Scale target = 100k+ rooms × 113 SECTORS** (113 = pr
 `COSIGN_TRIPLE` axis), **multiple simultaneous spinners** on the 8-byte host (the Node throttle=50 ceiling
 is what the 8-byte host lifts) → the ~1.16T-agents/s regime. The `10k/20k`-room code is the
 pre-Rust-8-byte **migration-precondition slice** being parity-piped — not the current frame.
+
+**Two-clock boundary:** these scale counts describe local synthetic PID emission/addressing over elapsed time, not concurrent external LLM completions and not simultaneous OS processes.
 
 **The outer-watcher / matrix layer (the self-watching top):** *"the matrix expands from outside the fabric
 to watch itself."* A 13-function watcher stack (observe → detect-liveness → correct → render → cognition →
